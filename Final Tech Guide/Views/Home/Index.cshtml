@@ -1,0 +1,121 @@
+﻿@model IEnumerable<Final_Tech_Guide.Models.HomeModel>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="">
+
+    <!-- Using javascript with <script>  before HTML elements are declared causes a problem, however src=".js" somehow solves the problem -->
+
+    <link rel="stylesheet" type="text/css" href="../Content/HomeStyle.css" />
+    <title>Tech Guide</title>
+
+
+    <script src="../Scripts/HomeJS.js">
+
+    </script>
+
+  
+
+    <!-- Main Content -->
+    <main>
+
+        <div id="everythingAboveUpdates" >
+
+            <img id="backgroundImage" src="../Resources/mainBackground.jpg" class="img-responsive" />
+            <!-- Navigation Bar Headree -->
+
+            <div style="margin-top:200px; margin-left:50px;">
+
+                <h1>Small demo for javascript!</h1>
+                <button class="btn  btn-default" onclick="Javascript: popup()">Like </button>
+                <button class="btn  btn-default" onclick="Javascript: changeText()">Change text</button>
+                <button class="btn  btn-default" onclick="Javascript: getText()">Change text</button>
+                <input type="text" id="textBox" value="get this text" />
+
+            </div>
+
+
+
+
+            <div id="IntroParagraph">
+                <p   >
+                    Paragraph on Technology 100, 150, 200, 250 to 300 Words for Kids, Students, and Children
+                    July 14, 2020 by Prasanna
+
+                    Paragraph on Technology: Technology is something that is gaining increasing importance in the world today. Wherever you look, there is technology. Even the device you are using to read this article uses technology. In simple words, technology is when we use science to apply it for practical purposes.
+
+                    For example, in a mobile phone, which is a form of technology, we are taking the practical purpose of communication and mixing it with science to create a phone. Here are some paragraphs on technology for children and students.
+
+                    
+                </p>
+
+            </div>
+
+            <p id="demo"></p>
+
+            <table class="table" style="display:none;">
+                <tr>
+
+                    <th>@Html.DisplayNameFor(model => model.ID)</th>
+                    <th>@Html.DisplayNameFor(model => model.Username)</th>
+                    <th>@Html.DisplayNameFor(model => model.Password)</th>
+                    <th>@Html.DisplayNameFor(model => model.Email)</th>
+
+                </tr>
+
+                <!-- repeating HTML with c#'s foreach' -->
+                @foreach (var item in Model)  // somehow model above is equal to Model
+                {
+                    <tr>
+                        <!-- DisplayFor() gets the data stored for each object's attributes  -->
+                        <td>@Html.DisplayFor(getID => item.ID)</td>
+                        <td>@Html.DisplayFor(getUsername => item.Username)</td>
+                        <td>@Html.DisplayFor(getPassword => item.Password)</td>
+                        <td>@Html.DisplayFor(getEmail => item.Email)</td>
+
+                    </tr>
+                }
+
+            </table>
+
+        </div>
+
+
+
+
+
+
+
+
+        <section id="Updates">
+
+            <span id="UpdatesHeader">Latest Updates!</span>
+
+            <img id="UpdatesImage" src="../Resources/newImage.png" class="img-responsive" />
+
+            <p id="UpdatesParagraph">
+
+                Paragraph on Technology 100, 150, 200, 250 to 300 Words for Kids, Students, and Children
+                July 14, 2020 by Prasanna
+
+                Paragraph on Technology: Technology is something that is gaining increasing importance in the world today. Wherever you look, there is technology. Even the device you are using to read this article uses technology. In simple words, technology is when we use science to apply it for practical purposes.
+
+                For example, in a mobile phone, which is a form of technology, we are taking the practical purpose of communication and mixing it with science to create a phone. Here are some paragraphs on technology for children and students.
+
+                You can read more Paragraph Writing about articles, events, people, sports, technology many more.
+
+            </p>
+
+        </section>
+
+
+
+    </main>
+
+
+     
+
+
+
+</div>

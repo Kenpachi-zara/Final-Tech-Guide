@@ -1,0 +1,47 @@
+﻿@model  IEnumerable<Final_Tech_Guide.Models.ProductsModel>
+
+@{
+    ViewBag.Title = "Products";
+    int counter = 0;
+}
+
+ 
+
+<link type="text/css" rel="stylesheet" href="../Content/Product.css" />
+ 
+<h1 id="ProductsTitle"> @ViewBag.Title </h1>
+<div class="row">
+
+
+    <div id="Product">
+
+
+
+
+
+        @foreach (var item in Model)
+        {
+            counter++;
+            if (counter == 2 )
+            { continue; }
+            var base64 = Convert.ToBase64String(item.Image);
+            var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+
+            var position = item.ID;
+            <span>
+                <img id="ProductImage" src="@imgSrc" class="img-responsive" />
+                <span id="ProductTitle">@Html.DisplayFor(modelItem => item.Title) </span>
+
+                <!-- text, Action, Controller, routeValues(passed data), null for html attributes -->
+
+
+
+                @Html.ActionLink("Discover", "ProductDetails", "Home", new { fuckingID = position.ToString() }, new { Class = "discover" })
+            </span>
+        }
+
+
+    </div>
+
+
+</div>

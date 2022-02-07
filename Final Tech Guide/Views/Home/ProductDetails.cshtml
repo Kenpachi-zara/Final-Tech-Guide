@@ -1,0 +1,26 @@
+﻿@model  Final_Tech_Guide.Models.ProductsModel
+@{
+    ViewBag.Title = "ProductDetails";
+
+    <!-- notice how we use Model here, to access the single model object -->
+
+    var base64 = Convert.ToBase64String(Model.Image);
+    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/ProductsDetails.css" />
+
+<h2 id="ProductDetailsTitle"> @Html.DisplayFor(m => m.Title)</h2>
+
+
+
+
+
+
+    <span id="ProductDetailsImage" >  <img src="@imgSrc" />  </span>
+    <span id="ProductDetailsVideo" >  @Html.Raw(@Model.Link) </span>
+
+
+
+<p> @Html.DisplayFor(m => m.Description)</p> <img src="~/Resources/amazonbutton.png" id="button" class="img-responsive img-rounded center-block"/>

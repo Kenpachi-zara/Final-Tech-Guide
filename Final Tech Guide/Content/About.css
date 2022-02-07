@@ -1,0 +1,59 @@
+﻿
+
+
+
+#ImageAndTitle {
+    
+    position:relative;
+    margin-top:30px;
+}
+
+.body-content {
+    width: 100%;
+    padding: 0px;
+}
+
+.img-responsive {
+    max-width: 100%; /* or to whatever you want here */
+    max-height: auto; /* or to whatever you want here */
+}
+
+
+#AboutBackground {
+    z-index: -1;
+    border-radius: 30px;
+    margin-top:-100px;
+}
+
+
+#AboutTitle {
+    position: absolute;
+    top: 70%;
+    color: bisque;
+    font-size: 100px;
+    color: ghostwhite;
+    width: 100%;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 6px;
+    height: 230px;
+    padding-top: 60px;
+    margin-top: 100px;
+    background-color: rgb(101, 204, 71 );
+}
+#AboutTitleBackground {
+    width: 100%;
+    text-align: center;
+}
+
+#AboutParagraph {
+    display: block;
+    position: relative;
+    width: 1400px;
+    left: 50%;
+    margin-left: -700px;
+    margin-top: 30px;
+}
+
+#BelowFooter{
+    margin-top:200px;
+}

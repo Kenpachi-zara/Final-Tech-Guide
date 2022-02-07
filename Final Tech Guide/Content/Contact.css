@@ -1,0 +1,72 @@
+﻿body {
+}
+
+.body-content {
+    width: 100%;
+    padding: 0px;
+
+}
+
+
+#BelowFooter {
+    margin-top: 200px;
+}
+
+
+#ContactBackground {
+    z-index: -1;
+    border-radius: 30px;
+    margin-top: -100px;
+
+}
+
+#contactDiv {
+    position:relative;
+}
+
+#ContactTitle {
+    position: absolute;
+    font-size: 100px;
+    margin-top: 100px;
+    top: 70%;
+    color: ghostwhite;
+    width: 100%;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 6px;
+    height: 230px;
+    padding-top: 60px;
+    background-color: rgb(101, 204, 71 );
+     
+}
+
+#ContactTitleBackground
+{
+    width:100%;
+    text-align:center;
+    
+}
+
+#ContactForm {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.form-group {
+    width:100% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input, textarea{
+    max-width:500px;
+}
+
+address
+{
+
+    text-align:center;
+}

@@ -1,0 +1,69 @@
+﻿
+.body-content {
+    width: 100%;
+    padding: 0px;
+}
+
+.form-control {
+    width: 392px;
+}
+
+#AuthTitle {
+    text-align: center;
+    margin-top: 150px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+    letter-spacing: 6px;
+}
+#RegisTitle {
+    text-align: center;
+    margin-top: 150px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+    letter-spacing: 6px;
+}
+
+#BelowFooter {
+    margin-top: 200px;
+}
+
+form {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input, textarea {
+    max-width: 400px;
+}
+
+.phony {
+    margin-top: 20px;
+}
+
+#btnSubmit {
+    padding: 10px 50px;
+    margin-top: 50px;
+}
+
+h2 {
+    margin-top: 130px;
+}
+
+#sTitle{
+    color:black !important;
+}
+#AuthForm
+{
+
+}

@@ -1,0 +1,76 @@
+﻿@model Final_Tech_Guide.Models.ContactModel
+
+@{
+    ViewBag.Title = "Contact Us";
+}
+
+
+<link rel="stylesheet" type="text/css" href="~/Content/Contact.css" />
+
+<div id="contactDiv">
+
+
+
+    <div id="ContactTitleBackground"> <h1 id="ContactTitle"> @ViewBag.Title </h1> </div>
+    <img id="ContactBackground" src="../Resources/Contact.jpg" class="img-responsive img-rounded" />
+</div>
+
+
+
+@using (Html.BeginForm("InsertContactSubmission", "Home", FormMethod.Post, new { Class = "form needs-validation center-block", novalidate = "false", id="ContactForm"}))
+{
+
+
+    <div class="form-group">
+
+
+        @Html.LabelFor(m => m.FullName)
+        @Html.TextBoxFor(m => m.FullName, null, new { Class = "form-control", required = "required" })
+        @Html.ValidationMessageFor(m => m.FullName)
+
+    </div>
+
+
+    <div class="form-group">
+
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, null, new { Class = "form-control", required = "required" })
+        @Html.ValidationMessageFor(m => m.Email)
+
+    </div>
+
+
+    <div class="form-group">
+
+        @Html.LabelFor(m => m.Description)
+        @Html.TextAreaFor(m => m.Description, 20, 100, new { Class = "form-control", required = "required" })
+        @Html.ValidationMessageFor(m => m.Description)
+
+    </div>
+
+    <div class="form-group">
+
+        <input id="btnSubmit" type="submit" class="btn btn-primary" value="Submit" onclick="Javascript: validate()" />
+
+    </div>
+
+
+
+
+}
+
+@ViewBag.IsSubmitted
+
+    
+<address>
+    One Microsoft Way<br />
+    Redmond, WA 98052-6399<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
+

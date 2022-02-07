@@ -1,0 +1,93 @@
+﻿
+@model  Final_Tech_Guide.Models.AuthenticationModel
+
+@{
+    ViewBag.Title = "Registration";
+}
+@Html.Raw(TempData["msg"]) <!-- to apply JavaScript, defined in action method within Controller  -->
+
+ 
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../Content/Authentication.css" />
+</head>
+
+
+<h1 id="RegisTitle"> @ViewBag.Title </h1> 
+
+
+@using (Html.BeginForm("InsertUser", "Home", FormMethod.Post, new { Class = "form needs-validation", novalidate = "false" }))
+// <form method ='post' action ='Default/HomePageAction' class ='form'
+{
+
+
+    // we wrap each group of form elements within div with class = "form-group"
+
+    <!-- Username -->
+    <div class="form-group" style="margin-top:100px;">
+
+        <!-- They're called Strongly Typed '-->
+        @Html.LabelFor(m => m.Username)
+        @Html.TextBoxFor(m => m.Username, null, new { Class = "form-control", placeholder = "short name", required = "required" })
+        @Html.ValidationMessageFor(m => m.Username)
+
+
+        <!-- <input type="text" class="form-control" id="Userame" name="Username" value> -->
+        <small id="passwordHelpBlock" class="form-text text-muted">
+            Your Username should be between 5 - 20 characters.
+        </small>
+
+    </div>
+
+
+
+    <!-- Password -->
+<div class="form-group">
+
+    @Html.LabelFor(m => m.Password)
+    @Html.TextBoxFor(m => m.Password, null, new { Class = "form-control", required = "required" })
+
+
+    <span class="text-danger" stlye="display:none;">  @Html.ValidationMessageFor(m => m.Password) </span>
+
+    <small id="passwordHelpBlock" class="form-text text-muted">
+        Your password must be 8-20 characters long, contain letters and numbers,<br /> and must not contain spaces, special characters, or emoji.
+    </small>
+
+</div>
+
+  
+
+    <!-- Email -->
+    <div class="form-group">
+
+
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, null, new { Class = "form-control ", required = "required" })
+
+
+        <span class="text-danger" stlye="display:none;">  @Html.ValidationMessageFor(m => m.Email)  </span>
+
+        <small id="passwordHelpBlock" class="form-text text-muted">
+            Your Email should be something like example"At Sign"gmail.com
+        </small>
+    </div>
+
+
+    <!-- Phone -->
+    <div class="form-group phony">
+        @Html.LabelFor(m => m.Phone)
+        @Html.TextBoxFor(m => m.Phone, null, new { Class = "form-control", required = "required" }) 
+
+        <span class="text-danger" stlye="display:none;">   @Html.ValidationMessageFor(m => m.Phone)  </span>
+
+</div>
+
+    <div class="form-group">
+        <!-- After submit details are sent to our Authentication Action method in DefaultController-->
+        <input id="btnSubmit" type="submit" class="btn btn-primary" value="Submit" onclick="Javascript: validate()" />
+
+    </div>
+}
+
+@ViewBag.SuccessMsg

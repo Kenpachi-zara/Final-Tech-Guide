@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+    <!-- local CSS files -->
+    <link rel="stylesheet" type="text/css" href="../Content/Site.css" />
+
+
+    <!-- I have to add all of the below for Validation to work -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="~/scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/scripts/jquery.validate.min.js"></script>
+    <script src="~/scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.js">
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.js">
+    </script>
+
+
+
+
+</head>
+
+<body style="position:absolute; width:100%; height:100%;">
+    <div class="navbar navbar-inverse" style="background-color:transparent !important; border:0; position:absolute; z-index:1000;">
+        <div class="container" id="WholeNavigationBar">
+            <div class="navbar-header">
+               
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Tech", "Index", "Home", new { area = "" }, new { @class = "navbar-brand", id = "Title" })
+                @Html.ActionLink("Guide", "Index", "Home", new { area = "" }, new { @class = "navbar-brand", id = "sTitle" })
+            </div>
+
+            <div class="navbar-collapse collapse" id="ULofNavigationBar">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { id = "Home" } )</li>
+                    <li>@Html.ActionLink("About", "About", "Home", new { id = "About" })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { id = "Contact" })</li>
+                    <li>@Html.ActionLink("Login", "Authentication", "Home", new { id = "Login" } )</li>
+                    <li>@Html.ActionLink("Products", "Products", "Home", new { id = "Products" } )</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        
+        <footer id="BelowFooter">
+
+          
+                <p>&copy; @DateTime.Now.Year - My Tech Guide Application</p>
+             
+
+            <div class="row">
+
+                <ul class="">
+
+                    <li class="col-md-4" > <a href="Facebook">Facebook</a> </li>
+                    <li class="col-md-4" > <a href="Twitter">Facebook</a> </li>
+                    <li class="col-md-4"> <a href="Instagram">Facebook</a> </li>
+
+                </ul>
+            </div>
+
+
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
