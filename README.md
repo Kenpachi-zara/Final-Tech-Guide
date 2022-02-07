@@ -43,9 +43,22 @@
 
 
 ## ProductDetails Page (ProductDetails.cshtml)
-**Super Simple, no backend stuff going on here just the baisc About.Us page***
+***using the same var products IEnumerable without having to refer to DAL all over again, I simply pass over the ID which matches with indices within products list I use .ElementAt(ID) which returns the underlying item and then data is inflated with an extra entry which is A link to A video that overviews the current tech gadget with a title and description***
 
 
+DAL (Data Access Layer as a sperate project within solution )
+
+## DAL (Data Access Layer as a sperate project within solution )
+***Basically the work with our local database is done here, using the path from a manually created file .UDL used from it and stored within var path, now most of the method used are referencing stored procedures and all data are returned to models as per request***
+
+
+## __Layout.cshtml
+***COntains the navbar and footer which is shared accross all views.***
+
+#To-Do-List : 
+- Need to add a functionality where each user is associated with favourite set of items
+- Inflate proper data by replacing the sample data 
+- Improvising more of the design so that it matches with industry's atmosphere 
 
 
 
