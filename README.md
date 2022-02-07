@@ -59,6 +59,7 @@ DAL (Data Access Layer as a sperate project within solution )
 - Need to add a functionality where each user is associated with favourite set of items
 - Inflate proper data by replacing the sample data 
 - Improvising more of the design so that it matches with industry's atmosphere 
+- Implement proper Tests
 
 
 
