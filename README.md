@@ -1,4 +1,4 @@
-# Final Tech Guide
+# Final Tech Guide (ASP.NET MVC)
 
 ***The project is mostly about goruping Tech Gadgets or Items that provide useful solutions or trending ones, it basically overviews each item with credit to the author with a link-through to purchase from Online platforms. The project is still half way through and is yet in the works for the final form. I believe it could help anyone who is a beginner ASP.net web-developer as it presents clarified MVC architecture with javascrip and bootstrap. All are welcome to contribute :shipit:.***
 
